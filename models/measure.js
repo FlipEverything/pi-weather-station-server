@@ -8,11 +8,11 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         gpsLongitude: {
-            type: DataTypes.FLOAT(10,6),
+            type: DataTypes.FLOAT(12,8),
             field: 'gps_longitude'
         },
         gpsLatitude: {
-            type: DataTypes.FLOAT(10,6),
+            type: DataTypes.FLOAT(12,8),
             field: 'gps_latitude'
         },
         temperature: {

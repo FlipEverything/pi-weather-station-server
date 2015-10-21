@@ -7,9 +7,13 @@ module.exports = function(sequelize, DataTypes) {
             field: 'date',
             allowNull: false
         },
-        gpsCoordinate: {
+        gpsLongitude: {
             type: DataTypes.FLOAT(10,6),
-            field: 'gps_coordinate'
+            field: 'gps_longitude'
+        },
+        gpsLatitude: {
+            type: DataTypes.FLOAT(10,6),
+            field: 'gps_latitude'
         },
         temperature: {
             type: DataTypes.DECIMAL(5,2),

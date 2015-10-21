@@ -3,3 +3,31 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  div.row
+    div.col-lg-3.col-md-6
+      div.panel.panel-primary
+        div.panel-heading
+          div.row
+            div.col-xs-3
+             i.fa.fa-dashboard.fa-5x
+            div.col-xs-9.text-right
+              div.huge #{measure.temperature} &deg;C
+              div Temperature
+
+        div.panel-footer
+         span.pull-left Last change: #{moment(measure.date).format("YYYY-MM-DD HH:mm")}
+         span.pull-right
+         div.clearfix
+    div.col-lg-3.col-md-6
+      div.panel.panel-green
+        div.panel-heading
+          div.row
+            div.col-xs-3
+              i.fa.fa-cloud.fa-5x
+            div.col-xs-9.text-right
+              div.huge #{measure.humidity} %
+              div Humidity
+        div.panel-footer
+          span.pull-left Last change: #{moment(measure.date).format("YYYY-MM-DD HH:mm")}
+          span.pull-right
+          div.clearfix

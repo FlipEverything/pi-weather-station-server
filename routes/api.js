@@ -21,13 +21,15 @@ router.get('/measure', function(req, res, next) {
 router.route('/measure').post(function(req, res) {
       models.Measure.create({
         date: req.body.date,
-        gpsCoordinate: req.body.gpsCoordinate,
+        gpsLongitude: req.body.gpsLongitude,
+        gpsLatitude: req.body.gpsLatitude,
         temperature: req.body.temperature,
         humidity: req.body.humidity
-      }).then(function(task) {
+      }).then(function(measure) {
         res.json({
           type: 'success',
-          message: 'Measure inserted!'
+          message: 'Measure inserted!',
+          data: measure
         })
         ;
       }).catch(function(err) {

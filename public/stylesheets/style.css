@@ -3,6 +3,22 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+}
+
+#panel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -180px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
 a {
   color: #00B7FF;
 }
@@ -27,4 +43,22 @@ a {
 
 .huge {
   font-size: 40px;
+}
+
+.panel-yellow {
+  border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+  border-color: #f0ad4e;
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+  color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+  color: #df8a13;
 }

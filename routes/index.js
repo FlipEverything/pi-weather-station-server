@@ -5,15 +5,12 @@ var moment = require('moment');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  models.Measure.findAll({ limit: 10, order: [['date', 'DESC']]}).then(function (measures) {
+  models.Measure.findAll({ limit: 50, order: [['date', 'DESC']]}).then(function (measures) {
+    var measureArray = [];
     measures.forEach(function (measure) {
-      console.log(measure.get());
+      measureArray.push(measure.get());
     });
-  });
-
-  models.Measure.findOne({ order: [['date', 'DESC']]}).then(function (measure) {
-    console.log(measure.get())
-    res.render('index', { title: 'Temperate monitor' , measure: measure.get(), moment: moment});
+    res.render('index', { title: 'Temperate monitor' , measure: measureArray[0], moment: moment, measureArray: measureArray});
   });
 });
 

@@ -6,7 +6,7 @@ This repo contains the server of the weather station. It contains the API and th
 
 ## Prerequisites
 * [Node.js]
-* (Optional) [PM2] (Process Manager 2)
+* (Optional) [PM2]
 * Database server (ex: MySQL)
 
 ## Installation

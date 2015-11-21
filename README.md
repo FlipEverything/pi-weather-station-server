@@ -57,6 +57,7 @@ $ DEBUG=pi-weather-station-server:server npm start
 * Add Logging
 * Add Graphs (Statistics)
 * Add Filtering
+* Real-time frontend
 
 ### Version
 0.1
